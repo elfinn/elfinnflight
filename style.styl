@@ -1,6 +1,9 @@
-#header
+standard-border()
   border-color #666
   border-style solid
+
+#header
+  standard-border()
   text-align center
   div
     display inline-block
@@ -14,3 +17,26 @@
     font-weight bold
     font-family Garamond, times, serif
     letter-spacing 3px
+
+#photos
+  display none
+  height 480px
+  width 640px
+  overflow hidden
+  margin 20px
+  standard-border()
+  & img
+    min-height 480px
+    min-width 640px
+    margin auto
+    vertical-align middle
+
+#texts
+  display block
+  standard-border()
+  float right
+  height 480px
+  width 640px
+  margin 20px
+  text-overflow elipsis
+  overflow hidden
