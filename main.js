@@ -1,13 +1,11 @@
 var photoPosts;
 function photosCallback(photoResponse) {
   photoPosts = photoResponse['posts'];
-  console.log(photoPosts);
 };
 
 var textPosts;
 function textCallback(textResponse) {
   textPosts = textResponse['posts'];
-  console.log(textPosts);
 };
 
 jQuery(function($) {
@@ -39,7 +37,6 @@ jQuery(function($) {
   
   var texts = $('#texts');
   var ft = textPosts[0];
-  console.log(ft);
   var title = ft['regular-title'];
   var body = ft['regular-body'];
   texts.append($('<h1>' + title + "</h1>"))
