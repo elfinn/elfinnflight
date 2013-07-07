@@ -11,7 +11,7 @@ function textCallback(textResponse) {
 jQuery(function($) {
   var photos = $('#photos');
   function addPhoto(photo, url) {
-    var photoSrc = photo['photo-url-700'];
+    var photoSrc = photo['photo-url-500'];
     var photoEl = $('<a href="' + url + '"><img src="' + photoSrc + '"></a>');
     photos.append(photoEl);
   }
