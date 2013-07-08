@@ -10,19 +10,19 @@ function textCallback(textResponse) {
 
 jQuery(function($) {
   var photos = $('#photos');
-  function addPhoto(photo, url) {
+  function addPhoto(photo) {
     var photoSrc = photo['photo-url-500'];
-    var photoEl = $('<a href="' + url + '"><img src="' + photoSrc + '"></a>');
+    var photoEl = $('<a href="//elfinnflight.com/tagged/photos"><img src="' + photoSrc + '"></a>');
     photos.append(photoEl);
   }
   photoPosts.forEach(function(fp) {
-    var postUrl = fp['url-with-slug'];
+    // var postUrl = fp['url-with-slug'];
     if (fp['photos']) {
       fp['photos'].forEach(function(photo) {
-        addPhoto(photo, postUrl);
+        addPhoto(photo);
       });
     } else {
-      addPhoto(fp, postUrl);
+      addPhoto(fp);
     }
   });
   photos.slidesjs({
