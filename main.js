@@ -25,15 +25,18 @@ jQuery(function($) {
       addPhoto(fp, postUrl);
     }
   });
-  photos.slidesjs({width:640, height:480, play:{
-    active: false,
-    effect: "fade",
-    interval: 5000,
-    auto: true,
-    swap: true,
-    pauseOnHover: true,
-    restartDelay: 2500
-  }});
+  photos.slidesjs({
+    width: 500,
+    height: 375,
+    play: {
+      active: false,
+      effect: "fade",
+      auto: true,
+      pauseOnHover: true,
+    },
+    navigation: {
+      active: false
+    }});
   
   var texts = $('#texts');
   var ft = textPosts[0];
