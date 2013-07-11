@@ -42,6 +42,14 @@ jQuery(function($) {
   var ft = textPosts[0];
   var title = ft['regular-title'];
   var body = ft['regular-body'];
-  texts.append($('<h1>' + title + "</h1>"))
-    .append($(body));
+  texts.append($(
+    '<div class="textcontent">' +
+      '<h1>' + title + "</h1>" +
+      body +
+    '</div>'))
+    .append($(
+      '<div class="textlinks">' +
+        '<a href="//elfinnflight.com/tagged/text">Text posts</a>' +
+        '<a href="' + ft['url-with-slug'] + '">This post</a>' +
+      '</div>'));
 });
