@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head><style type="text/css">#header {
+  <head>
+	<style type="text/css">
+#header {
   border-color: #666;
   border-style: solid;
   text-align: center;
@@ -17,7 +19,20 @@
   font-family: Garamond, times, serif;
   letter-spacing: 3px;
 }
+#header a.link{
+  color: #666;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  padding: 0px 40px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
 #content {
+  font-family: Garamond, times, serif;
   width: -webkit-calc(80% - 40px);
   width: calc(80% - 40px);
   padding: 20px 20px;
@@ -73,6 +88,40 @@
   overflow: hidden;
   margin-left: 20px;
 }
+#calendar {
+  display: block;
+  border-color: #666;
+  border-style: solid;
+  height: 360px;
+  width: -webkit-calc(100% - 800px);
+  width: calc(100% - 800px);
+  padding: 10px;
+  text-overflow: elipsis;
+  overflow: hidden;
+  float: left;
+  margin-left: 20px;
+}
+#video {
+  display: block;
+  border-color: #666;
+  border-style: solid;
+  height: 360px;
+  width: 700px;
+  width: 700px;
+  padding: 10px;
+  text-overflow: elipsis;
+  overflow: hidden;
+  float: right;
+  margin-right: 20px;
+}
+#embed{
+  padding: 0px 10px 0px 0px;
+  float: left;
+}
+#vid-description{
+  padding: 10px;
+  vertical-align: middle;
+}
 .textcontent {
   display: block;
   width: 100%;
@@ -102,14 +151,48 @@
     float: none;
     margin: auto;
   }
+  #calendar{
+    width: 80%;
+    margin: auto;
+    float: none;
+  }
+  #video{
+    width: 80%;
+    margin: auto;
+    height: auto;
+    float: none;
+  }
+  #embed{
+    float: none;
+  }
+  #vid-description{
+    float: none;
+  }
 }
 </style>
   </head>
   <body>
-    <div id="header"><a href="//elfinnflight.com/">ELIZABETH FINN<br>AERIALIST</a></div>
+    <div id="header"><a href="//elfinnflight.com/">ELIZABETH FINN<br>AERIALIST</a><br>
+    <a class="link" href="http://elfinnflight.com/About">About</a>
+    <a class="link" href="http://elfinnflight.com/tagged/photos">Pictures</a>
+    <a class="link" href="http://elfinnflight.com/tagged/video">Videos</a>
+    <a class="link" href="http://elfinnflight.com/calendar">Calendar</a>
+    <a class="link" href="http://elfinnflight.com/ask">Contact</a>
+    </div>
     <div id="content">
       <div id="photos" class="left"></div>
       <div id="texts" class="right"></div>
+      <div id="video" class="right">
+         <iframe id="embed" width="480" height="360" src="//www.youtube.com/embed/gDr2TiVP-Yo" frameborder="0" allowfullscreen></iframe> 
+      <div id="vid-description"> 
+        Tissu act to Paul Simon's "Graceland" at Acrosports'
+        Spring Student Showcase (June 2013).
+        <br> <br>
+        <a href="http://elfinnflight.com/tagged/video">More videos</a> </div>
+      </div>
+ <div id="calendar" class="left">
+        <a href="http://elfinnflight.com/Calendar">Classes + Events</a>
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=355&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=fvtkvblbapvits80o30c7v4jgo%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="100%" height="340" frameborder="0" scrolling="no"></iframe></div>
     </div>
   </body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
